@@ -1,0 +1,172 @@
+.header {
+    @media (max-width: 375px) {
+        height: 800px;
+    }
+
+    &__top {
+        width: 1069.9px;
+        height: 60px;
+        margin: 30px auto 0;
+        @extend %flex-x;
+
+        .nav__menu {
+            width: 327px;
+            height: 32px;
+            @extend %flex-x;
+
+            a {
+                @include text-style($main-font, 700, 15px, 19.53px, -0.47px, $secondary-color);
+                transition: 0.5s;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: blue;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover {
+                    color: $title;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .header_btn {
+            @include text-style($main-font, 700, 17px, 22.13px, -0.53px, $white);
+            background-color: $btn-1;
+            width: 211px;
+            height: 60px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            width: 375px;
+            height: 280px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .nav__menu {
+                padding-left: 0;
+                flex-direction: column;
+                height: auto;
+                width: 375px;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__content {
+        width: 1146px;
+        height: 644px;
+        margin: 100px auto 0;
+        @extend %flex-x;
+
+        .hero_text {
+            width: 459px;
+            height: 461px;
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+
+            .first_title {
+                @include text-style($main-font, 700, 80px, 77px, -2.5px, $title);
+                width: 462px;
+                height: 231px;
+            }
+
+            .first_description {
+                @include text-style($secondary-font, 400, 20px, 30px, -0.63px, $secondary-color);
+                width: 459px;
+                height: 90px;
+                margin: 30px auto 0;
+            }
+
+            .buttons {
+                width: 311px;
+                height: 60px;
+                @extend %flex-x;
+                margin: 50px 0 0;
+
+                .content_btn {
+                    @include text-style($main-font, 700, 17px, 22.13px, -0.53px, $white);
+                    background-color: $btn-2;
+                    width: 211px;
+                    height: 60px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .hero_3d {
+            width: 610px;
+            height: 644px;
+            position: relative;
+
+            .box {
+                position: absolute;
+                top: 116px;
+                left: 56px;
+                z-index: 100px;
+            }
+
+            .skater {
+                position: absolute;
+                z-index: 200px;
+            }
+
+            .znak {
+                position: absolute;
+                top: 421px;
+                left: 381px;
+                z-index: 300px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            width: 375px;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 100px auto 0;
+
+            .hero_3d {
+                display: none;
+            }
+
+            .hero_text {
+                width: 375px;
+                height: auto;
+                text-align: center;
+
+                .first_title {
+                    font-size: 50px;
+                    line-height: 57px;
+                    width: 375px;
+                    height: auto;
+                }
+
+                .first_description {
+                    width: 375px;
+                    height: auto;
+                }
+
+                .buttons {
+                    margin: 50px auto 0;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,248 @@
+.plans {
+    &__content {
+        width: 1111px;
+        height: 140px;
+        margin: 150px auto 0;
+        @extend %flex-x;
+
+        .info_text_3 {
+            @include text-style($main-font, 700, 60px, 70px, -1.88px, $title);
+            width: 523px;
+            height: 140px;
+        }
+
+        .main_switch {
+            width: 332px;
+            height: 65px;
+            background-color: #F7F7FB;
+            border-radius: 10px;
+
+            .switch {
+                display: flex;
+                width: 320px;
+                height: 55px;
+                background-color: #F7F7FB;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                margin: 5px auto;
+            }
+
+            .switch input[type="radio"] {
+                display: none;
+            }
+
+            .switch_button {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                @include text-style($main-font, 700, 16px, 20.83px, -0.5px, $title);
+            }
+
+            input[type="radio"]:checked+.switch_button {
+                background-color: #5454D4;
+                color: white;
+            }
+
+            .switch_button:hover {
+                background-color: #5454D4;
+                color: white;
+            }
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            width: 375px;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 100px auto 0;
+
+            .info_text_3 {
+                font-size: 50px;
+                line-height: 57px;
+                width: 375px;
+                height: auto;
+                text-align: center;
+            }
+        }
+    }
+
+    &__prices {
+        @extend %flex-x;
+        margin: auto;
+        width: 1069px;
+        height: 473px;
+        margin: 82px auto 0;
+
+        .starter {
+            width: 330px;
+            height: 441px;
+            border-radius: 10px;
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .starter:hover {
+            background-color: #FF7143;
+            color: white;
+            transform: scale(1.14);
+        }
+
+        .starter:hover .name_of_price {
+            color: white;
+        }
+
+        .starter:hover .cost {
+            color: white;
+        }
+
+        .starter:hover .cost_month {
+            color: white;
+        }
+
+        .starter:hover .desc_of_price {
+            color: white;
+        }
+
+        .starter:hover .button_of_price {
+            background-color: #9F3919;
+            color: white;
+        }
+
+
+        .premium {
+            width: 330px;
+            height: 441px;
+            border-radius: 10px;
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .premium:hover {
+            background-color: #FF7143;
+            color: white;
+            transform: scale(1.14);
+        }
+
+        .premium:hover .name_of_price {
+            color: white;
+        }
+
+        .premium:hover .cost {
+            color: white;
+        }
+
+        .premium:hover .cost_month {
+            color: white;
+        }
+
+        .premium:hover .desc_of_price {
+            color: white;
+        }
+
+        .premium:hover .button_of_price {
+            background-color: #9F3919;
+            color: white;
+        }
+
+
+        .enterprise {
+            width: 330px;
+            height: 441px;
+            border-radius: 10px;
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .enterprise:hover {
+            background-color: #FF7143;
+            color: white;
+            transform: scale(1.14);
+        }
+
+        .enterprise:hover .name_of_price {
+            color: white;
+        }
+
+        .enterprise:hover .cost {
+            color: white;
+        }
+
+        .enterprise:hover .cost_month {
+            color: white;
+        }
+
+        .enterprise:hover .desc_of_price {
+            color: white;
+        }
+
+        .enterprise:hover .button_of_price {
+            background-color: #9F3919;
+            color: white;
+        }
+
+
+
+        .name_of_price {
+            @include text-style($main-font, 400, 18px, 28px, -0.56px, $secondary-color);
+            margin-top: 34px;
+        }
+
+        .cost_span {
+            margin-top: 22px;
+            width: 205px;
+            height: 56px;
+        }
+
+        .cost {
+            @include text-style($main-font, 700, 60px, 56px, -1.03px, $cost);
+
+        }
+
+        .cost_month {
+            @include text-style($main-font, 700, 28px, 56px, -1.03px, $cost);
+        }
+
+        .desc_of_price {
+            @include text-style($secondary-font, 400, 17px, 50px, -0.53px, $secondary-color);
+            margin-top: 28px
+        }
+
+        .button_of_price {
+            @include text-style($main-font, 700, 17px, 22.13px, -0.53px, $btn-2);
+            width: 285px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: $white;
+            margin-top: 36px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            width: 375px;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 100px auto 0;
+        }
+    }
+}

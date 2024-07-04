@@ -1,0 +1,36 @@
+.audit {
+    width: 1070px;
+    height: 208px;
+    margin: 138px auto 0;
+    @extend %flex-x;
+
+    .block {
+        width: 307px;
+        height: 208px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .title_4 {
+            @include text-style($main-font, 700, 24px, 36px, -0.75px, $title);
+            margin-top: 7px;
+        }
+
+        .description_4 {
+            @include text-style($secondary-font, 400, 16px, 24px, -0.5px, $secondary-color);
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+        align-items: center;
+        width: 375px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 100px auto 0;
+    }
+}

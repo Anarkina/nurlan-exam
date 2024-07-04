@@ -1,0 +1,12 @@
+@import "./reset.scss";
+@import "./vars.scss";
+@import "./mixin-extens.scss";
+
+@import "../blocks/header.scss";
+@import "../blocks/partners.scss";
+@import "../blocks/about.scss";
+@import "../blocks/audit.scss";
+@import "../blocks/plans.scss";
+@import "../blocks/footer.scss";
+
+// блоки продолжаем импортировать сюда по очереди

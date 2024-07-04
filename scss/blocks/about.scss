@@ -1,0 +1,157 @@
+.about {
+    &__index {
+        width: 1070px;
+        height: 473px;
+        margin: 150.17px auto 0;
+        @extend %flex-x;
+
+        .hero_with_pen {
+            width: 348.5px;
+            height: 473px;
+            position: relative;
+
+            .circle {
+                position: absolute;
+                top: 84px;
+            }
+
+            .hero_2 {
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        .info_text_1 {
+            width: 556px;
+            height: 229px;
+            display: flex;
+            flex-direction: column;
+
+            .second_title {
+                @include text-style($main-font, 700, 50px, 57px, -1.56px, $title);
+                width: 556px;
+                height: 57px;
+            }
+
+            .second_description {
+                @include text-style($secondary-font, 400, 20px, 30px, -0.63px, $secondary-color);
+                width: 459px;
+                height: 90px;
+                margin-top: 30px;
+            }
+
+            .learn_more_1 {
+                @include text-style($main-font, 700, 17px, 22.13px, -0.53px, $learn-more);
+                width: 89px;
+                height: 22px;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            width: 375px;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 100px auto 0;
+
+            .info_text_1 {
+                width: 375px;
+                height: auto;
+                text-align: center;
+
+                .second_title {
+                    width: 375px;
+                    height: auto;
+                }
+
+                .second_description {
+                    width: 375px;
+                    height: auto;
+                }
+                .learn_more_1{
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+
+    &__metrics {
+        width: 963.37px;
+        height: 474px;
+        margin: 83px auto 0;
+        @extend %flex-x;
+
+        .info_text_2 {
+            width: 556px;
+            height: 199px;
+            display: flex;
+            flex-direction: column;
+
+            .third_title {
+                @include text-style($main-font, 700, 50px, 57px, -1.56px, $title);
+                width: 556px;
+                height: 57px;
+            }
+
+            .third_description {
+                @include text-style($secondary-font, 400, 20px, 30px, -0.63px, $secondary-color);
+                width: 459px;
+                height: 60px;
+                margin-top: 30px;
+            }
+
+            .learn_more_2 {
+                @include text-style($main-font, 700, 17px, 22.13px, -0.53px, $learn-more);
+                width: 89px;
+                height: 22px;
+                margin-top: 30px;
+            }
+
+        }
+
+        .hero_with_graphic {
+            width: 346.37px;
+            height: 474px;
+            position: relative;
+
+            .graphic {
+                position: absolute;
+                top: 19px;
+                left: 139px;
+                z-index: -100;
+            }
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            width: 375px;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 100px auto 0;
+
+            .info_text_2 {
+                width: 375px;
+                height: auto;
+                text-align: center;
+
+                .third_title {
+                    width: 375px;
+                    height: auto;
+                }
+
+                .third_description {
+                    width: 375px;
+                    height: auto;
+                }
+                .learn_more_2{
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+}
